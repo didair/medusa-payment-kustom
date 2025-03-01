@@ -8,7 +8,7 @@
   </a>
 </p>
 <h1 align="center">
-  Medusa Plugin Starter
+  Medusa Payment Kustom
 </h1>
 
 <h4 align="center">
@@ -31,6 +31,16 @@
     <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
   </a>
 </p>
+
+## Plugin options
+
+### 1. apiUrl
+The api url has to be configured to a valid Klarna API url. See list here: [Klarna Docs](https://docs.klarna.com/api/api-urls/).
+
+### 2. username
+Get username and password from your merchant portal. [See Klarna Docs](https://docs.klarna.com/api/authentication/)
+
+### 3. password
 
 ## Compatibility
 
