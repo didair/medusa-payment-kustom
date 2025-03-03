@@ -24,7 +24,7 @@ class KustomCheckoutProviderService extends AbstractPaymentProvider<Options> {
   static identifier = "kustom-checkout";
   protected logger_: Logger
   protected options_: Options
-  protected client;
+  protected client: KlarnaClient;
 
   constructor(container: InjectedDependencies, options: Options) {
     super(container, options);
@@ -54,6 +54,9 @@ class KustomCheckoutProviderService extends AbstractPaymentProvider<Options> {
   async initiatePayment(
     input: InitiatePaymentInput,
   ): Promise<InitiatePaymentOutput> {
+    // TODO: Run createOrder here, return the html snippet to frontend
+    // Call this method in storefront via sdk.store.payment.initiatePaymentSession and display the returned iframe
+
     const {
       amount,
       currency_code,
