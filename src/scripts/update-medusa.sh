@@ -1,0 +1,1 @@
+yarn add @medusajs/medusa@latest @medusajs/admin-sdk@latest @medusajs/cli@latest @medusajs/framework@latest @medusajs/ui@latest @medusajs/test-utils@latest
