@@ -27,6 +27,7 @@
   "scripts": {
     "build": "medusa plugin:build",
     "dev": "medusa plugin:develop",
+    "push": "medusa plugin:publish",
     "prepublishOnly": "medusa plugin:build"
   },
   "devDependencies": {

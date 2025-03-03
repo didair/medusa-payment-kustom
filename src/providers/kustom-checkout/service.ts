@@ -73,23 +73,23 @@ class KustomCheckoutProviderService extends AbstractPaymentProvider<Options> {
     };
 
     // Assuming the cart items are passed in the context
-    const cartItems = context.cart?.items || []
+    // const cartItems = context.cart?.items || []
 
     // Use the cartItems in your payment provider's API call
-    const response = await this.client.initializePayment({
-      amount,
-      currency_code,
-      items: cartItems.map(item => ({
-        name: item.title,
-        quantity: item.quantity,
-        price: item.unit_price
-      }))
-    });
+    // const response = await this.client.initializePayment({
+    //   amount,
+    //   currency_code,
+    //   items: cartItems.map(item => ({
+    //     name: item.title,
+    //     quantity: item.quantity,
+    //     price: item.unit_price
+    //   }))
+    // });
 
-    return {
-      id: response.id,
-      data: response,
-    };
+    // return {
+    //   id: response.id,
+    //   data: response,
+    // };
   };
 
   async deletePayment(input: DeletePaymentInput): Promise<DeletePaymentOutput> {
@@ -149,11 +149,15 @@ class KustomCheckoutProviderService extends AbstractPaymentProvider<Options> {
     switch (status) {
       case 'authorized':
         return { status: 'authorized' }
+      // @ts-ignore
       case 'approved':
+      // @ts-ignore
       case 'in_mediation':
         return { status: 'captured' }
 
+      // @ts-ignore
       case 'cancelled':
+      // @ts-ignore
       case 'refunded':
         return { status: 'canceled' }
       default:
